@@ -1,0 +1,17 @@
+/* Layout and accessibility refinements retained from the approved derived candidate. */
+/* The longer, descriptive H1 needs a bounded size, not a new layout. */
+.qv-hero h1 {font-size: clamp(2.7rem, 5.2vw, 4.7rem); line-height: 1.08; letter-spacing: -.045em;}
+.qv-preview-caption {color: #9CC8D3; font-size: .8rem; line-height: 1.5; max-width: 390px; margin: 18px auto 0; text-align: center;}
+/* Keep skip navigation above page chrome and give its target actual focus. */
+.qv-skip {z-index: 2000; transform: none; width: 1px; height: 1px; padding: 0; border: 0; clip-path: inset(50%); overflow: hidden;}
+.qv-skip:focus {position: relative; inset: auto; display: block; width: max-content; height: auto; padding: .75rem 1rem; border: 1px solid #00E5FF; max-width: calc(100% - 16px); margin: 8px; transform: none; clip-path: none; overflow: visible;}
+main:focus {outline: none;}
+section[id], main[id] {scroll-margin-top: 110px;}
+.qv-chip[type="button"] {min-height: 44px; min-width: 44px;}
+@media (max-width: 600px) {
+  .qv-hero h1 {font-size: clamp(2.65rem, 11vw, 3.5rem);}
+  .qv-preview-caption {padding-inline: 12px;}
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important;}
+}

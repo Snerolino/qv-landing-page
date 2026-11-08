@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 190" role="img" aria-labelledby="title desc">
+  <title id="title">Logo do Quem Vamos?</title>
+  <desc id="desc">Assinatura horizontal do Quem Vamos? com símbolo e wordmark.</desc>
+  <defs>
+    <filter id="softCyan" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feColorMatrix in="b" type="matrix" values="0 0 0 0 0 0 0 0 0 .75 0 0 0 0 1 0 0 0 .4 0"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="softRed" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="3" result="b"/><feColorMatrix in="b" type="matrix" values="1 0 0 0 1 0 0 0 0 .25 0 0 0 0 .2 0 0 0 .4 0"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <radialGradient id="pinGlow" cx="45%" cy="25%" r="70%"><stop offset="0%" stop-color="#00E5FF"/><stop offset="55%" stop-color="#0077A8" stop-opacity=".72"/><stop offset="100%" stop-color="#0D1118"/></radialGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6B5F"/><stop offset="1" stop-color="#FF4D4D"/></linearGradient>
+  </defs>
+  <g transform="translate(12 6) scale(.92)">
+    <path filter="url(#softCyan)" d="M80 7c38 0 68 30 68 67 0 45-49 87-68 108C61 161 12 119 12 74 12 37 42 7 80 7Z" fill="url(#pinGlow)" stroke="#00E5FF" stroke-width="4"/>
+    <path d="M43 41h74a17 17 0 0 1 17 17v28a17 17 0 0 1-17 17H89l-18 13v-13H43a17 17 0 0 1-17-17V58a17 17 0 0 1 17-17Z" fill="#060B12" stroke="#08293D" stroke-width="2"/>
+    <g filter="url(#softRed)"><circle cx="62" cy="72" r="6" fill="#FF4D4D"/><circle cx="80" cy="72" r="6" fill="#FF4D4D"/><circle cx="98" cy="72" r="6" fill="#FF4D4D"/></g>
+    <g fill="#071622" stroke="#00E5FF" stroke-width="2" opacity=".9"><rect x="28" y="103" width="15" height="43" rx="2"/><rect x="117" y="101" width="16" height="45" rx="2"/></g>
+    <g fill="#F5F5F5" stroke="#0D1118" stroke-width="2"><circle cx="64" cy="128" r="12"/><circle cx="96" cy="128" r="12"/><path d="M46 161c3-20 13-28 28-28 16 0 26 9 30 28Z"/><path d="M82 161c3-19 12-27 27-27 15 0 24 8 27 27Z"/></g>
+    <path filter="url(#softRed)" d="M80 182 38 142c-5-5-5-13 0-18s13-5 18 0l24 23 24-23c5-5 13-5 18 0s5 13 0 18Z" fill="url(#coral)" stroke="#FF796D" stroke-width="3"/>
+  </g>
+  <g font-family="Nunito, Nunito Sans, Avenir Next Rounded, Trebuchet MS, system-ui, sans-serif" font-weight="900" font-size="82" letter-spacing="-4">
+    <text x="184" y="104" fill="#F5F5F5" filter="url(#softCyan)">Quem</text>
+    <text x="184" y="168" fill="#FF4D4D" filter="url(#softRed)">Vamos?</text>
+  </g>
+</svg>

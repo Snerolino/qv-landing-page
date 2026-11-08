@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="bg" cx="65%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#0A2A3D" stop-opacity=".88"/>
+      <stop offset="42%" stop-color="#0D1118"/>
+      <stop offset="100%" stop-color="#05070C"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="92" height="92" patternUnits="userSpaceOnUse" patternTransform="rotate(18)">
+      <path d="M0 0H92M0 0V92" fill="none" stroke="#00E5FF" stroke-opacity=".07" stroke-width="1"/>
+      <path d="M46 0V92M0 46H92" fill="none" stroke="#00E5FF" stroke-opacity=".035" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="route" x1="0" x2="1"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#FF4D4D"/></linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#grid)" opacity=".8"/>
+  <g fill="none" stroke="#00E5FF" stroke-opacity=".12" stroke-width="2">
+    <path d="M-70 695 C210 640 260 505 450 532 S740 690 912 510 1208 370 1690 472"/>
+    <path d="M-40 290 C160 356 270 236 420 260 S698 442 850 370 1010 180 1650 244"/>
+    <path d="M120 1050 C310 842 474 866 620 724 S846 590 1000 632 1190 816 1510 654"/>
+  </g>
+  <path d="M245 650 C370 555 430 608 535 520 S735 372 858 434 1002 610 1158 492 1276 320 1410 372" fill="none" stroke="url(#route)" stroke-width="6" stroke-linecap="round" stroke-dasharray="18 22" filter="url(#glow)" opacity=".85"/>
+  <g filter="url(#glow)">
+    <circle cx="245" cy="650" r="8" fill="#00E5FF"/><circle cx="858" cy="434" r="9" fill="#FF4D4D"/><circle cx="1410" cy="372" r="11" fill="#FF4D4D"/>
+    <circle cx="535" cy="520" r="7" fill="#00E5FF"/><circle cx="1158" cy="492" r="7" fill="#00E5FF"/>
+  </g>
+  <g opacity=".3">
+    <circle cx="858" cy="434" r="78" fill="none" stroke="#00E5FF" stroke-width="2"/>
+    <circle cx="858" cy="434" r="132" fill="none" stroke="#00E5FF" stroke-width="1"/>
+    <circle cx="858" cy="434" r="205" fill="none" stroke="#00E5FF" stroke-width="1"/>
+  </g>
+</svg>

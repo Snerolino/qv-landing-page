@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quem Vamos? — Eventos em Porto Alegre</title>
+  <meta name="description" content="Descobre eventos, mapas, favoritos e encontros em Porto Alegre sem depender de feed, sorte ou print perdido.">
+  <meta name="theme-color" content="#0D1118">
+  <link rel="canonical" href="https://www.quemvamos.com.br/">
+  <meta property="og:url" content="https://www.quemvamos.com.br/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Quem Vamos? — Eventos em Porto Alegre">
+  <meta property="og:description" content="Menos feed perdido. Mais cidade acontecendo.">
+  <link rel="icon" href="assets/qv-favicon.svg" type="image/svg+xml">
+
+
+  <style type="text/css">@font-face {font-family:'Nunito';font-style:normal;font-weight:500;src:url(cf-fonts/v/nunito/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Nunito';font-style:normal;font-weight:600;src:url(cf-fonts/v/nunito/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Nunito';font-style:normal;font-weight:700;src:url(cf-fonts/v/nunito/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Nunito';font-style:normal;font-weight:800;src:url(cf-fonts/v/nunito/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Nunito';font-style:normal;font-weight:900;src:url(cf-fonts/v/nunito/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}</style>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'">
+  <link rel="stylesheet" href="preview.css">
+  <link rel="stylesheet" href="revision-art.css">
+  <link rel="stylesheet" href="experience.css">
+  <link rel="stylesheet" href="manifesto.css">
+</head>
+<body class="qv-page">
+  <a class="qv-skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="qv-header" data-qv-header>
+    <div class="qv-header__inner">
+      <a class="qv-brand" href="#topo" aria-label="Quem Vamos?, voltar ao início">
+        <img class="qv-brand__logo" src="assets/qv-logo-horizontal-dark.svg" alt="Logo do Quem Vamos?" width="186" height="58">
+      </a>
+      <nav class="qv-nav" aria-label="Navegação principal">
+        <a href="#app">O app</a>
+        <a href="#mapa">Mapa vivo</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#produtores">Eventos</a>
+        <a href="#manifesto">Manifesto</a>
+      </nav>
+      <a class="qv-button qv-button--small qv-button--coral" href="https://app.quemvamos.com.br/">Abrir o app</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="qv-hero qv-section" id="topo" aria-labelledby="hero-title">
+      <canvas class="qv-motion-canvas" id="qv-motion-canvas" aria-hidden="true"></canvas>
+      <div class="qv-hero__background" aria-hidden="true">
+        <picture>
+          <img src="assets/qv-hero-map-night.svg" alt="" loading="eager">
+        </picture>
+      </div>
+      <div class="qv-hero__glow" aria-hidden="true"></div>
+
+      <div class="qv-container qv-hero__grid">
+        <div class="qv-hero__copy">
+          <div class="qv-eyebrow">
+            <span class="qv-dot"></span>
+            App agregador de eventos em Porto Alegre
+          </div>
+          <h1 id="hero-title">Descubra eventos em <span class="qv-title-accent">Porto Alegre.</span></h1>
+          <p class="qv-hero__subtitle">Menos feed perdido. Mais cidade acontecendo.</p>
+          <p class="qv-hero__text">Shows, feiras, exposições, teatro e encontros culturais. Explore a agenda e o mapa para transformar vontade de sair em plano.</p>
+          <div class="qv-actions" aria-label="Ações principais">
+            <a class="qv-button qv-button--coral" href="https://app.quemvamos.com.br/">Abrir o app</a>
+            <a class="qv-button qv-button--ghost" href="https://app.quemvamos.com.br/cadastrar">Tenho um evento</a>
+          </div>
+          <p class="qv-microcopy">Acesse pelo navegador. Eventos cadastrados passam por revisão.</p>
+          <button class="qv-motion-control" id="qv-motion-toggle" type="button" aria-pressed="false" aria-controls="qv-motion-canvas" hidden>Pausar efeitos</button>
+        </div>
+
+        <div class="qv-hero-card" aria-label="Ilustração conceitual herdada da landing, não captura do app atual">
+          <div class="qv-phone qv-asset-frame">
+            <div class="qv-phone__top">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="qv-phone__map" aria-hidden="true">
+              <img class="qv-phone__photo" src="assets/event-art/festival.webp" alt="" width="800" height="1000" loading="eager" decoding="async">
+              <span class="qv-route qv-route--one"></span>
+              <span class="qv-route qv-route--two"></span>
+              <span class="qv-pin qv-pin--live" style="--x: 68%; --y: 24%"></span>
+              <span class="qv-pin" style="--x: 31%; --y: 54%"></span>
+              <span class="qv-pin qv-pin--saved" style="--x: 76%; --y: 70%"></span>
+              <span class="qv-pulse" style="--x: 53%; --y: 43%"></span>
+            </div>
+            <div class="qv-floating-chips" aria-hidden="true">
+              <span class="qv-chip qv-chip--active">Hoje</span>
+              <span class="qv-chip qv-chip--live">Ao vivo</span>
+              <span class="qv-chip">Perto de você</span>
+              <span class="qv-chip">Salvo</span>
+            </div>
+            <article class="qv-event-card">
+              <div>
+                <span class="qv-event-card__tag">Ilustração do app</span>
+                <h2>Evento ilustrativo</h2>
+                <p>Exemplo visual · não é evento real</p>
+              </div>
+              <span class="qv-bookmark" aria-hidden="true"></span>
+            </article>
+          </div>
+          <p class="qv-preview-caption">Ilustração conceitual da landing existente. Não é captura do app atual nem evento real.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qv-section qv-problem" aria-labelledby="problema-title">
+      <div class="qv-container qv-split">
+        <div>
+          <p class="qv-kicker">O problema</p>
+          <h2 id="problema-title">Porto Alegre tem evento.<br><span class="qv-title-accent">O problema é encontrar.</span></h2>
+        </div>
+        <div class="qv-copy-block">
+          <p>Um cartaz na calçada. Um story que sumiu. A indicação que morreu no grupo. Tem cultura acontecendo, mas descobrir o que combina com o teu dia ainda dá trabalho demais.</p>
+          <p>A proposta é simples: organizar opções em uma agenda cultural, com lugar, data e contexto para ajudar a decidir.</p>
+        </div>
+      </div>
+      <div class="qv-container qv-fragments" aria-label="Fragmentos de divulgação espalhada">
+        <span>feed perdido</span>
+        <span>story vencido</span>
+        <span>print no grupo</span>
+        <span>cartaz na rua</span>
+        <span>boca a boca</span>
+        <span>algoritmo de mau humor</span>
+      </div>
+      <div class="qv-container qv-image-strip" aria-label="Clima visual da cidade e do app">
+        <figure class="qv-photo-frame qv-photo-frame--tall">
+          <img src="assets/qv-city-night.webp" alt="Cena noturna urbana com luzes e clima de rua em Porto Alegre" width="768" height="1376" loading="lazy" decoding="async">
+          <figcaption>cidade acontecendo</figcaption>
+        </figure>
+        <figure class="qv-photo-frame">
+          <img src="assets/event-art/feira.webp" alt="Ilustração de uma feira cultural ao ar livre, sem texto" width="800" height="1000" loading="lazy" decoding="async">
+          <figcaption>feiras e descobertas</figcaption>
+        </figure>
+        <figure class="qv-photo-frame qv-photo-frame--offset">
+          <img src="assets/qv-culture-collage.webp" alt="Colagem visual de cultura, noite, cartazes e encontros" width="1080" height="1080" loading="lazy" decoding="async">
+          <figcaption>cultura perto da rua</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="qv-section" id="app" aria-labelledby="app-title">
+      <div class="qv-container qv-section-heading">
+        <p class="qv-kicker">O app</p>
+        <h2 id="app-title">Uma agenda viva,<br><span class="qv-title-accent">não uma lista morta.</span></h2>
+      </div>
+      <div class="qv-container qv-card-grid" data-qv-cards>
+        <article class="qv-card is-active" tabindex="0">
+          <span class="qv-card__icon" aria-hidden="true"><img src="assets/event-art/mapa-icon.svg" alt="" width="38" height="38"></span>
+          <h3>No mapa</h3>
+          <p>Veja a cidade respirando. Pins mostram onde tem coisa acontecendo agora, perto de você ou no caminho.</p>
+        </article>
+        <article class="qv-card" tabindex="0">
+          <span class="qv-card__icon" aria-hidden="true"><img src="assets/event-art/calendario-icon.svg" alt="" width="38" height="38"></span>
+          <h3>Rola hoje?</h3>
+          <p>Veja o que acontece hoje, amanhã, no fim de semana ou quando bater aquela vontade perigosa de sair de casa.</p>
+        </article>
+        <article class="qv-card" tabindex="0">
+          <span class="qv-card__icon" aria-hidden="true"><img src="assets/event-art/salvo-icon.svg" alt="" width="38" height="38"></span>
+          <h3>Salva esse</h3>
+          <p>Guarda o que interessa e decide depois. Porque nem toda decisão precisa ser tomada no pânico do grupo.</p>
+        </article>
+        <article class="qv-card" tabindex="0">
+          <span class="qv-card__icon" aria-hidden="true"><img src="assets/event-art/amigos-icon.svg" alt="" width="38" height="38"></span>
+          <h3>Tô indo</h3>
+          <p>Marca presença, vê quem vai e chama junto. O rolê começa antes da porta.</p>
+        </article>
+        <article class="qv-card" tabindex="0">
+          <span class="qv-card__icon" aria-hidden="true"><img src="assets/event-art/conversa-icon.svg" alt="" width="38" height="38"></span>
+          <h3>Na conversa</h3>
+          <p>Comentários, avaliações e contexto para entender melhor antes de ir.</p>
+        </article>
+        <article class="qv-card" tabindex="0">
+          <span class="qv-card__icon" aria-hidden="true"><img src="assets/event-art/evento-icon.svg" alt="" width="38" height="38"></span>
+          <h3>Tenho um evento</h3>
+          <p>Produtores, casas e coletivos podem cadastrar eventos para revisão.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="qv-section qv-map-section" id="mapa" aria-labelledby="mapa-title">
+      <div class="qv-container qv-map-layout">
+        <div class="qv-map-copy">
+          <p class="qv-kicker">Mapa vivo</p>
+          <h2 id="mapa-title">A cidade no mapa.<br>O rolê na <span class="qv-title-accent">mão.</span></h2>
+          <p>Pins, filtros, rotas e estados ajudam a entender o que está acontecendo perto, ao vivo, salvo ou em destaque.</p>
+          <div class="qv-chip-row" data-qv-chips aria-label="Filtros demonstrativos do mapa">
+            <button class="qv-chip is-selected" type="button">Hoje</button>
+            <button class="qv-chip" type="button">Amanhã</button>
+            <button class="qv-chip qv-chip--live" type="button">Ao vivo</button>
+            <button class="qv-chip" type="button">Grátis</button>
+            <button class="qv-chip" type="button">Perto de você</button>
+            <button class="qv-chip" type="button">Salvo</button>
+          </div>
+          <div class="qv-scene-controls" role="group" aria-label="Explorar cenas ilustrativas, sem eventos reais">
+            <button class="qv-scene-button" data-qv-scene="festival" type="button" aria-pressed="false">Música &amp; noite</button>
+            <button class="qv-scene-button" data-qv-scene="feira" type="button" aria-pressed="true">Feiras &amp; rua</button>
+            <button class="qv-scene-button" data-qv-scene="oficina" type="button" aria-pressed="false">Cursos &amp; oficinas</button>
+            <button class="qv-scene-button" data-qv-scene="encontro" type="button" aria-pressed="false">Encontros</button>
+          </div>
+          <p class="qv-scene-status" id="qv-scene-status" role="status" aria-live="polite" aria-atomic="true">Feiras &amp; rua · Hoje. Demonstração ilustrativa, sem consulta à programação real.</p>
+        </div>
+        <div class="qv-map-visual qv-asset-frame qv-photo-panel">
+          <img src="assets/event-art/feira.webp" alt="Cena conceitual de feira e encontros em uma praça; não é mapa nem evento real" width="800" height="1000" loading="lazy" decoding="async">
+          <div class="qv-panel-card" aria-hidden="true">
+            <span>Descobertas pela cidade</span>
+            <strong>Feiras, shows e encontros</strong>
+            <small>ilustração conceitual, não é mapa ao vivo</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="qv-section" id="como-funciona" aria-labelledby="how-title">
+      <div class="qv-container">
+        <p class="qv-kicker">Sem complicação</p>
+        <h2 id="how-title">Do “não sei” ao <span class="qv-title-accent">“tô indo”.</span></h2>
+        <p class="qv-how-intro">Três passos. Nada de rodar a internet inteira atrás de um cartaz perdido.</p>
+        <div class="qv-step-grid">
+          <article class="qv-step"><span>01 / DESCUBRA</span><h3>Abre a agenda</h3><p>Começa pela programação cultural de Porto Alegre e vê as opções disponíveis.</p></article>
+          <article class="qv-step"><span>02 / EXPLORE</span><h3>Filtra e explora</h3><p>Escolhe o período, o tipo de evento e usa o mapa para entender onde acontece.</p></article>
+          <article class="qv-step"><span>03 / DECIDA</span><h3>Salva e decide</h3><p>Consulta os detalhes e guarda o que chamou atenção para organizar o próximo plano.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="qv-section qv-social" aria-labelledby="social-title">
+      <div class="qv-container qv-section-heading qv-section-heading--center">
+        <p class="qv-kicker">Convite</p>
+        <h2 id="social-title">Do “alguém topa?”<br>ao <span class="qv-title-accent">“rolê confirmado”.</span></h2>
+        <p>O Quem Vamos? não serve só para encontrar eventos. Serve para transformar descoberta em combinação: salvar, chamar, ver quem vai e chegar junto.</p>
+      </div>
+      <div class="qv-container qv-bubbles" aria-label="Balões de conversa">
+        <span class="qv-bubble">Bora juntar?</span>
+        <span class="qv-bubble qv-bubble--light">Alguém topa?</span>
+        <span class="qv-bubble qv-bubble--coral">Rolê confirmado!</span>
+        <span class="qv-bubble">Chama geral!</span>
+      </div>
+    </section>
+
+    <section class="qv-section qv-producers" id="produtores" aria-labelledby="produtores-title">
+      <div class="qv-container qv-feature">
+        <div>
+          <p class="qv-kicker">Produtores e lugares</p>
+          <h2 id="produtores-title">Quem faz <span class="qv-title-accent">cultura precisa aparecer</span> sem implorar ao algoritmo.</h2>
+          <p>Bares, teatros, galerias, festas, coletivos, feiras e produtores podem cadastrar eventos e ajudar a cidade a se enxergar melhor.</p>
+          <p>A ideia é simples: mais visibilidade real, menos gritaria perdida no feed.</p>
+          <a class="qv-button qv-button--ghost" href="https://app.quemvamos.com.br/cadastrar">Tenho um evento</a>
+          <p class="qv-note">Eventos passam por revisão para manter a base útil, segura e organizada.</p>
+        </div>
+        <div class="qv-asset-frame qv-feature__image qv-photo-panel qv-photo-panel--producers">
+          <img src="assets/event-art/oficina.webp" alt="Ilustração de curso criativo com pessoas aprendendo cerâmica em grupo, sem texto" width="900" height="900" loading="lazy" decoding="async">
+          <div class="qv-panel-card" aria-hidden="true">
+            <span>Cadastro</span>
+            <strong>Evento enviado</strong>
+            <small>exemplo de envio para revisão</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="qv-section qv-manifesto" id="manifesto" aria-labelledby="manifesto-title" aria-describedby="manifesto-status">
+      <div class="qv-container qv-manifesto__layout">
+        <div class="qv-manifesto__lead">
+          <p class="qv-kicker">Nosso manifesto</p>
+          <h2 id="manifesto-title">A cidade é de todos.<br><span>A cultura também.</span></h2>
+          <p class="qv-manifesto__intro">O direito de participar começa com o direito de saber.</p>
+          <a class="qv-manifesto__agenda" href="https://app.quemvamos.com.br/">Encontre o próximo encontro <span aria-hidden="true">↗</span></a>
+          <figure class="qv-manifesto__city">
+            <div class="qv-manifesto__city-art">
+              <img src="assets/identity/cidade-encontros.webp" alt="" width="1000" height="563" loading="lazy">
+              <p class="qv-manifesto__city-message">Mais cidade.<br><strong>Mais encontro.</strong></p>
+            </div>
+            <figcaption>Porto Alegre é o ponto de partida. A imagem é uma ilustração conceitual.</figcaption>
+          </figure>
+        </div>
+        <div class="qv-manifesto__body">
+          <p>Um show num bar pequeno. Uma feira na praça. Uma oficina de bairro. A cultura já está acontecendo — mas, muitas vezes, as pessoas não ficam sabendo.</p>
+          <p>Chamamos essa distância de <strong>rolê invisível</strong>. O Quem Vamos? nasce para aproximar quem cria, quem organiza e quem quer participar, sem fingir que conhece a cidade inteira.</p>
+          <blockquote>
+            <svg class="qv-manifesto__route" viewBox="0 0 240 46" aria-hidden="true" focusable="false" fill="none">
+              <path d="M5 29h51c25 0 20-19 49-19h34c23 0 23 23 48 23h23" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 6" stroke-linecap="round"/>
+              <circle cx="5" cy="29" r="4" fill="currentColor"/>
+              <path d="M224 5c-9 0-15 7-15 15 0 11 15 22 15 22s15-11 15-22c0-8-6-15-15-15Z" stroke="currentColor" stroke-width="1.5"/>
+              <circle class="qv-manifesto__route-point" cx="224" cy="20" r="4"/>
+            </svg>
+            Não queremos decidir o que a cidade deve viver. Queremos ajudar a cidade a descobrir o que já vive.
+          </blockquote>
+          <details class="qv-manifesto__more">
+            <summary>Ler mais do manifesto</summary>
+            <div class="qv-manifesto__expanded">
+              <h3>A cultura não precisa caber numa ideia só.</h3>
+              <p>Popular, experimental, tradicional, comercial, comunitária, independente, gratuita ou paga. Nenhum aplicativo é maior do que a cidade. Pluralidade também pede responsabilidade: informação clara e respeito às pessoas.</p>
+              <h3>O ingresso pode ter preço. Divulgar não deveria ter pedágio.</h3>
+              <p>Propomos divulgação básica gratuita, inclusive para eventos comerciais, sem compra de prioridade editorial. São compromissos em avaliação, não uma política definitiva aprovada por esta página.</p>
+              <h3>Tecnologia como ponte, não prisão de atenção.</h3>
+              <p>Queremos mais encontros fora da tela, uma experiência progressivamente acessível e financiamento transparente. Serviços opcionais e retorno social precisam de estudo, viabilidade e decisões de governança — não de promessas vazias.</p>
+              <p class="qv-manifesto__closing">A cidade não pertence a um algoritmo.<br>A cultura não pertence a um aplicativo.</p>
+            </div>
+          </details>
+          <p class="qv-manifesto__status" id="manifesto-status">Síntese do Manifesto Público v1 · proposta editorial em revisão. Esta página não formaliza políticas econômicas, compromissos jurídicos ou certificação de acessibilidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="qv-section qv-principles" id="principios" aria-labelledby="principios-title">
+      <div class="qv-container qv-section-heading">
+        <p class="qv-kicker">Princípios em construção</p>
+        <h2 id="principios-title">Cultura plural.<br><span class="qv-title-accent">Critérios claros.</span></h2>
+        <p class="qv-principles__status">Uma visão para orientar o projeto. As propostas abaixo ainda dependem de aprovação e de verificação dos fluxos do produto.</p>
+      </div>
+      <div class="qv-container qv-principle-list">
+        <article>
+          <span>01</span>
+          <h3>Divulgar sem pedágio</h3>
+          <p>Propomos divulgação básica gratuita, inclusive para eventos comerciais. Isso não significa ingresso gratuito nem aprovação automática.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Visibilidade sem privilégio pago</h3>
+          <p>A proposta é não vender prioridade editorial nem condicionar a divulgação à contratação de serviços.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Transparência para escolher</h3>
+          <p>Defendemos informação clara, critérios compreensíveis e distinção entre recomendação, parceria e publicidade.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Privacidade com propósito</h3>
+          <p>Queremos coleta proporcional a cada funcionalidade, sem transformar dados pessoais em moeda de troca.</p>
+        </article>
+        <article>
+          <span>05</span>
+          <h3>Mais vozes, menos barreiras</h3>
+          <p>Pluralidade e acessibilidade são objetivos contínuos. Informação desconhecida não deve ser apresentada como garantia.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="qv-section qv-origin" aria-labelledby="origem-title">
+      <div class="qv-container qv-feature qv-feature--reverse">
+        <div>
+          <p class="qv-kicker">Origem</p>
+          <h2 id="origem-title">Nasce perto da <span class="qv-title-accent">rua.</span></h2>
+          <p>O Quem Vamos? parte de uma relação real com a cena cultural e noturna de Porto Alegre.</p>
+          <p>O projeto tem apoio inicial do Dirty Old Man, mas não nasce para ser vitrine de uma casa só. A proposta é servir a cidade, seus lugares, produtores, artistas e públicos.</p>
+        </div>
+        <div class="qv-origin-board qv-asset-frame">
+          <img src="assets/event-art/encontro.webp" alt="Ilustração de encontro cultural com música, feira e convivência no parque, sem texto" width="1440" height="600" loading="lazy" decoding="async">
+          <div class="qv-origin-badge" aria-hidden="true">
+            <span>Origem local</span>
+            <strong>Nasce perto da rua, não do algoritmo.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="qv-section" id="perguntas" aria-labelledby="faq-title">
+      <div class="qv-container qv-faq-layout">
+        <div class="qv-faq-lead"><p class="qv-kicker">Sem letras miúdas</p><h2 id="faq-title">Perguntar <span class="qv-title-accent">faz parte.</span></h2><p>Boa agenda começa com informação clara. O resto é propaganda.</p></div>
+        <div class="qv-faq-list">
+          <details><summary>O que é o Quem Vamos?</summary><p>É uma agenda cultural voltada a descobrir eventos em Porto Alegre, com consulta por lista, mapa, filtros e informações de cada evento.</p></details>
+          <details><summary>Preciso instalar um aplicativo?</summary><p>Não. Você pode abrir a agenda diretamente no navegador.</p></details>
+          <details><summary>Como encontro eventos para hoje ou para o fim de semana?</summary><p>Entre na agenda e use os filtros de período e tipo de evento, ou explore a visualização em mapa. As opções dependem da programação publicada.</p></details>
+          <details><summary>Posso cadastrar um evento?</summary><p>O aplicativo possui fluxo de cadastro de eventos, sujeito às regras de acesso e revisão antes da publicação. Use “Tenho um evento” para consultar as opções no app.</p></details>
+          <details><summary>O Quem Vamos? vende ingressos?</summary><p>O foco é descobrir e consultar eventos, não operar uma bilheteria. Confira informações de ingresso e acesso com a organização responsável.</p></details>
+          <details><summary>Os horários e locais podem mudar?</summary><p>Programações podem ser alteradas ou canceladas. Confira os detalhes atualizados e, quando necessário, os canais do organizador antes de sair.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="qv-section qv-final" id="acompanhar" aria-labelledby="final-title">
+      <div class="qv-container qv-final__box">
+        <img class="qv-final__background" src="assets/qv-city-night.webp" alt="" width="768" height="1376" loading="lazy" decoding="async">
+        <img src="assets/qv-logo-symbol-dark.svg" alt="Ícone do app Quem Vamos?" width="94" height="112" loading="lazy">
+        <p class="qv-kicker">Explore o app</p>
+        <h2 id="final-title">A cidade está acontecendo. Bora?</h2>
+        <p>Abra a agenda, explore o mapa e encontre o próximo evento em Porto Alegre.</p>
+        <div class="qv-actions qv-actions--center">
+          <a class="qv-button qv-button--coral" href="https://app.quemvamos.com.br/">Abrir o app</a>
+          <a class="qv-button qv-button--ghost" href="https://app.quemvamos.com.br/cadastrar">Tenho um evento</a>
+        </div>
+        <div class="qv-interest" role="note">
+          <strong>O próximo rolê começa na agenda.</strong>
+          <span>Para enviar um evento, use “Tenho um evento”. Os envios passam por revisão.</span>
+        </div>
+        <p class="qv-final__tagline">Menos feed perdido.<br>Mais cidade acontecendo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="qv-footer">
+    <div class="qv-container qv-footer__inner">
+      <a class="qv-footer__brand" href="#topo" aria-label="Quem Vamos?, voltar ao início">
+        <img src="assets/qv-logo-horizontal-dark.svg" alt="Logo do Quem Vamos?" width="170" height="52" loading="lazy">
+      </a>
+      <div><p>Menos feed perdido. Mais cidade acontecendo.</p><small class="qv-art-disclaimer">Artes conceituais ilustrativas. Não representam eventos reais.</small></div>
+      <nav aria-label="Links do rodapé">
+        <a href="#app">O app</a>
+        <a href="#mapa">Mapa</a>
+        <a href="#produtores">Produtores</a>
+        <a href="#manifesto">Manifesto</a>
+        <a href="#principios">Princípios</a>
+        <a href="#perguntas">Dúvidas</a>
+      </nav>
+    </div>
+  </footer>
+
+
+  <script src="app.js" defer></script>
+  <script src="preview.js" defer></script>
+  <script src="experience.js" defer></script>
+</body>
+</html>
